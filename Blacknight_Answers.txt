@@ -1,0 +1,54 @@
+/******************************************************************************
+Case Insensitive Polindrome Check
+
+*******************************************************************************/
+#include <stdio.h>
+#include <iostream>
+#include <ctype.h>
+#include <stdio.h>
+#include <algorithm>
+#include <cctype>
+#include <string>
+
+using namespace std;
+
+bool isPalindrome(string str) 
+{
+int length = str.length(); 
+for (int i = 0; i < length / 2;i++) {
+    
+  
+  if (std::toupper(str[i]) != std::toupper(str[length - 1 - i])) {
+         return false;
+    }     
+  } 
+ return true;
+}
+
+    int main() {
+      string Word;
+  cout << "Enter object for analysis: " << endl;
+  cin >> Word;
+  if(isPalindrome(Word))
+  cout << Word <<" is a palindrome.";
+    else cout << Word <<" is not a palindrome.";
+      return 0;
+}
+/////////////////////////////////////////////////////////////////////
+2)Select id,name from customer order by name desc, id asc
+
+///////////////////////////////////////////////////////////////////
+3)SELECT students.id,students.name,students.marks,
+	
+		CASE WHEN (marks) > 90
+		THEN 'A+'
+		WHEN (marks) < 89 AND (TOTAL) > 70
+		THEN 'A'
+		WHEN (TOTAL) < 69 AND (TOTAL) > 50
+		THEN 'B'
+		WHEN (TOTAL) <= 50 AND (TOTAL) > 40
+		THEN 'C'
+		WHEN (TOTAL) < 40 AND 
+		THEN 'FAIL'
+		END AS GRADE
+	from students
